@@ -13,7 +13,7 @@ const App = () => {
     },[])
   return (
       <div>
-          {togle === true && <div data-testid='togle-test'>togle</div>}
+          {togle === true && <div data-testid='togle-elem'>togle</div>}
           {data && <div>data</div>}
         <h1> Happy hacking!!!</h1>
         <button data-testid='togle-test' onClick={onClick}>click</button>

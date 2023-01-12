@@ -26,7 +26,11 @@ describe('TEST',()=> {
   test('renders learn reactdfddfv', async () => {
     render(<App/>);
     const button = screen.getByTestId('togle-test')
+    expect(screen.queryByTestId('togle-elem')).toBeNull();
     fireEvent.click(button)
+    expect(screen.queryByTestId('togle-elem')).toBeInTheDocument();
+    fireEvent.click(button)
+    expect(screen.queryByTestId('togle-elem')).toBeNull();
   })
 
 })
